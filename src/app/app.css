@@ -1,0 +1,118 @@
+/* Neumorphism Kitchen - Global Styles */
+@import url('./neumorphism.css');
+
+/* Back button - Neumorphic */
+.back-btn {
+  @extend .neumo-btn;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn:hover {
+  transform: translateY(-50%) translateY(-2px);
+}
+
+.dark-theme .back-btn {
+  --neumo-light-card: var(--neumo-dark-card);
+}
+
+/* Neumorphic Navbar */
+.navbar {
+  @extend .neumo-navbar;
+  border-radius: 24px;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem !important;
+}
+
+.neumorphic-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.layout-main {
+  padding-top: 2rem;
+}
+
+.layout-root {
+  min-height: 100vh;
+}
+
+.navbar-brand {
+  margin-left: 3rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--rc-text);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .navbar-brand {
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.neumo-navbar .navbar-brand {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* Override Bootstrap cards with neumorphism */
+.card {
+  @extend .neumo-card;
+  border-radius: 24px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn {
+  @extend .neumo-btn;
+  border-radius: 16px !important;
+  font-weight: 600;
+}
+
+.form-control, .form-select {
+  @extend .neumo-input;
+  border-radius: 16px !important;
+}
+
+.dark-theme .form-control::placeholder,
+.dark-theme .form-select option {
+  color: #a0aec0 !important;
+  opacity: 0.8;
+}
+
+/* Smooth theme transitions */
+* {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Neumorphic badges */
+.badge {
+  border-radius: 12px;
+  padding: 0.375rem 0.75rem;
+  font-weight: 500;
+  box-shadow: 
+    2px 2px 4px rgba(0,0,0,0.1),
+    -2px -2px 4px rgba(255,255,255,0.8);
+}
+
+.dark-theme .badge {
+  box-shadow: 
+    inset 1px 1px 2px rgba(0,0,0,0.3),
+    inset -1px -1px 2px rgba(75,85,99,0.3);
+}

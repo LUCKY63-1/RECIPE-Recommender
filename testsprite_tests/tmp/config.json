@@ -1,0 +1,19 @@
+{
+  "status": "init",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:51941/",
+  "backendAuthType": "public",
+  "executionArgs": {
+    "projectName": "reciperec",
+    "projectPath": "c:\\Angular\\webapp\\reciperec",
+    "testIds": [
+      "TC009"
+    ],
+    "additionalInstruction": "Test the navigation functionality. Navigate to the results-list page, try clicking the 'View Favorites' button, and observe if it redirects to the favorites page. Check the browser console for any errors and verify if the favorites page displays the expected content. Identify the root cause of why the 'View Favorites' button is not working.",
+    "envs": {
+      "API_KEY": "sk-user-I0hx4pNN13QaCFpEgFp9uAFGQyAJVPVf340IhfZxy_Dlr7qrSZBxfWYMwo27Wq01H_xTn7YNE4iK6Iqs2Z03Y--XtLeaJijhBP14hD_u0N-yHI3PFplG0mLdpAErEghJ06A"
+    }
+  },
+  "serverPort": 64240
+}

@@ -1,0 +1,231 @@
+/* Global styles */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+.recipe-card-hover {
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.recipe-card-hover:hover {
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* Creative Dark Mode */
+.dark-theme {
+  --bs-body-bg: #0f172a;
+  --bs-body-color: #f0f9ff;
+  --bs-tertiary-bg: #1f2937;
+  --bs-primary: #60a5fa;
+  --bs-primary-rgb: 96, 165, 250;
+  --bs-secondary: #a0aec0;
+  --bs-secondary-rgb: 160, 174, 192;
+}
+
+.dark-theme {
+  background-color: #0f172a !important;
+  color: #f0f9ff !important;
+}
+
+.dark-theme .navbar {
+  background-color: #020817 !important;
+  --bs-navbar-color: #f0f9ff;
+  --bs-navbar-hover-color: #60a5fa;
+  border-bottom: 1px solid #1f2937;
+}
+
+.dark-theme .navbar .navbar-brand {
+  color: #60a5fa !important;
+  font-weight: 700;
+}
+
+.dark-theme .nav-link {
+  color: #e0e7ff !important;
+  font-weight: 500;
+}
+
+.dark-theme .nav-link:hover,
+.dark-theme .nav-link.active {
+  color: #60a5fa !important;
+}
+
+.dark-theme .card {
+  background-color: #111827;
+  color: #f0f9ff;
+  border-color: #1f2937;
+}
+
+.dark-theme .card-body {
+  background-color: #111827;
+  color: #f0f9ff;
+}
+
+.dark-theme .card-title {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.dark-theme .card-text {
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.dark-theme .text-muted {
+  color: #b0bec5 !important;
+  font-weight: 500;
+}
+
+.dark-theme .badge {
+  background-color: #1f2937 !important;
+  color: #f0f9ff !important;
+  border-color: #374151 !important;
+  font-weight: 600;
+}
+
+.dark-theme .badge.bg-success-subtle {
+  background-color: #064e3b !important;
+  color: #5eead4 !important;
+}
+
+.dark-theme .badge.bg-info-subtle {
+  background-color: #0c4a6e !important;
+  color: #38bdf8 !important;
+}
+
+.dark-theme .badge.bg-warning-subtle {
+  background-color: #542c06 !important;
+  color: #fbbf24 !important;
+}
+
+.dark-theme .badge.bg-danger-subtle {
+  background-color: #7f1d1d !important;
+  color: #f87171 !important;
+}
+
+.dark-theme .btn-outline-primary {
+  color: #60a5fa;
+  border-color: #60a5fa;
+  font-weight: 600;
+}
+
+.dark-theme .btn-outline-primary:hover {
+  background-color: #60a5fa;
+  color: #0f172a;
+}
+
+.dark-theme .btn-outline-secondary {
+  color: #a0aec0;
+  border-color: #a0aec0;
+  font-weight: 600;
+}
+
+.dark-theme .btn-outline-secondary:hover {
+  background-color: #a0aec0;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.dark-theme .btn-outline-danger {
+  color: #f87171;
+  border-color: #f87171;
+  font-weight: 600;
+}
+
+.dark-theme .btn-outline-danger:hover {
+  background-color: #f87171;
+  color: #0f172a;
+}
+
+.dark-theme .btn-primary {
+  background-color: #60a5fa;
+  border-color: #60a5fa;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.dark-theme .btn-primary:hover {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6 {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.dark-theme p {
+  color: #e2e8f0;
+}
+
+.dark-theme a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.dark-theme a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.dark-theme .recipe-card-hover:hover {
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .layout-root {
+  background-color: #0f172a;
+}
+
+.dark-theme .layout-main {
+  background-color: #0f172a;
+}
+
+.dark-theme input,
+.dark-theme select,
+.dark-theme textarea {
+  background-color: #1f2937;
+  color: #f0f9ff;
+  border-color: #374151;
+  font-weight: 500;
+}
+
+.dark-theme input::placeholder,
+.dark-theme select::placeholder,
+.dark-theme textarea::placeholder {
+  color: #a0aec0;
+}
+
+.dark-theme .form-control,
+.dark-theme .form-select {
+  background-color: #1f2937;
+  color: #f0f9ff;
+  border-color: #374151;
+  font-weight: 500;
+}
+
+.dark-theme .form-control:focus,
+.dark-theme .form-select:focus {
+  background-color: #1f2937;
+  color: #f0f9ff;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 0.25rem rgba(96, 165, 250, 0.25);
+}
+
+.dark-theme .form-select option {
+  background-color: #1f2937;
+  color: #f0f9ff;
+}
+
+.dark-theme .form-label {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+/* Smooth transitions */
+body, .bg-body-tertiary, .navbar, .nav-link, .card, input, select {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

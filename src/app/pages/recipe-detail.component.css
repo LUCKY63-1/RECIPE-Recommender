@@ -1,0 +1,131 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  background-color: var(--rc-surface);
+  color: var(--rc-text);
+  border-radius: var(--rc-radius-lg);
+  border: 1px solid var(--rc-border-subtle);
+  box-shadow: var(--rc-shadow-soft);
+  padding: 30px;
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0; /* Start hidden for fade-in */
+}
+
+/* Typography */
+.card-title {
+  color: var(--rc-heading);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: var(--rc-text-soft);
+}
+
+/* Buttons */
+.btn-outline-secondary {
+  color: var(--rc-muted);
+  border-color: var(--rc-border-subtle);
+  border-radius: var(--rc-radius-pill);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--rc-hover-surface);
+  color: var(--rc-text);
+  border-color: var(--rc-primary);
+  box-shadow: var(--rc-shadow-soft);
+  transform: translateY(-1px);
+}
+
+/* Share button */
+.btn-share {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--rc-radius-pill);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-share:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  color: #fff;
+}
+
+.btn-share:active {
+  transform: translateY(0);
+}
+
+/* Badges */
+.badge {
+  padding: 8px 12px;
+  border-radius: var(--rc-radius-pill);
+  font-size: 0.9rem;
+  font-weight: normal;
+  background-color: var(--rc-badge-subtle-bg);
+  color: var(--rc-badge-subtle-text);
+}
+
+/* List items */
+.list-group-item {
+  border-color: var(--rc-border-subtle);
+  color: var(--rc-text);
+  padding: 12px 0;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+/* Alert info (tips panel) */
+.alert-info {
+  background-color: var(--rc-alert-info-bg);
+  border-color: var(--rc-alert-info-border);
+  color: var(--rc-alert-info-text);
+  border-radius: var(--rc-radius-md);
+  padding: 20px;
+  box-shadow: var(--rc-shadow-soft);
+}
+
+.alert-info p {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.alert-info ul {
+  list-style-type: disc;
+  margin-left: 18px;
+  margin-bottom: 0;
+}
+
+.alert-info li {
+  margin-bottom: 4px;
+}
+
+/* Animations (color-agnostic) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,129 @@
+/* Neumorphism Kitchen Design System */
+:root {
+  /* Light Theme - Extruded/Convex */
+  --neumo-light-bg: #f8fafc;
+  --neumo-light-shadow: rgba(0,0,0,0.08);
+  --neumo-light-highlight: rgba(255,255,255,0.8);
+  --neumo-light-card: #ffffff;
+  --neumo-light-border: rgba(0,0,0,0.06);
+}
+
+.dark-theme {
+  /* Dark Theme - Sunken/Concave */
+  --neumo-dark-bg: #1a202c;
+  --neumo-dark-shadow: rgba(0,0,0,0.4);
+  --neumo-dark-highlight: rgba(45,55,72,0.6);
+  --neumo-dark-card: #2d3748;
+  --neumo-dark-border: rgba(45,55,72,0.8);
+}
+
+/* Base Neumorphism Styles */
+.neumo-card {
+  background: var(--neumo-light-card, var(--neumo-dark-card));
+  border-radius: 24px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.neumo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(145deg, var(--neumo-light-highlight, transparent), var(--neumo-light-shadow, transparent));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0.7;
+  transition: opacity 0.4s ease;
+}
+
+.dark-theme .neumo-card::before {
+  background: linear-gradient(145deg, var(--neumo-dark-highlight), var(--neumo-dark-shadow));
+  opacity: 0.6;
+}
+
+/* Pressed State */
+.neumo-card:active {
+  transform: translateY(2px);
+  box-shadow: none !important;
+}
+
+/* Buttons */
+.neumo-btn {
+  background: var(--neumo-light-card, var(--neumo-dark-card));
+  border: none;
+  border-radius: 16px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    6px 6px 12px var(--neumo-light-shadow, var(--neumo-dark-shadow)),
+    -6px -6px 12px var(--neumo-light-highlight, var(--neumo-dark-highlight));
+}
+
+.neumo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    8px 8px 16px var(--neumo-light-shadow, var(--neumo-dark-shadow)),
+    -8px -8px 16px var(--neumo-light-highlight, var(--neumo-dark-highlight));
+}
+
+.neumo-btn:active {
+  transform: translateY(1px);
+  box-shadow: 
+    inset 2px 2px 4px var(--neumo-light-shadow, var(--neumo-dark-shadow)),
+    inset -2px -2px 4px var(--neumo-light-highlight, var(--neumo-dark-highlight));
+}
+
+/* Inputs */
+.neumo-input, .neumo-select {
+  background: var(--neumo-light-card, var(--neumo-dark-card));
+  border: none;
+  border-radius: 16px;
+  padding: 0.875rem 1.25rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 
+    inset 2px 2px 4px var(--neumo-light-shadow, var(--neumo-dark-shadow)),
+    inset -2px -2px 4px var(--neumo-light-highlight, var(--neumo-dark-highlight));
+}
+
+.neumo-input:focus, .neumo-select:focus {
+  outline: none;
+  box-shadow: 
+    4px 4px 8px var(--neumo-light-shadow, var(--neumo-dark-shadow)),
+    -4px -4px 8px var(--neumo-light-highlight, var(--neumo-dark-highlight)),
+    0 0 0 3px rgba(59,130,246,0.1);
+  transform: translateY(-1px);
+}
+
+/* Navbar */
+.neumo-navbar {
+  background: var(--neumo-light-card, var(--neumo-dark-card));
+  border-radius: 28px;
+  padding: 1rem 2rem;
+  margin: 1rem 0 2rem 0;
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    12px 12px 24px var(--neumo-light-shadow, var(--neumo-dark-shadow)),
+    -12px -12px 24px var(--neumo-light-highlight, var(--neumo-dark-highlight));
+  border: 1px solid var(--neumo-light-border, var(--neumo-dark-border));
+}
+
+/* Global card override */
+.card, .neumo-card {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Smooth theme switch */
+* {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}

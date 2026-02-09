@@ -1,0 +1,37 @@
+<div class="layout-root bg-body-tertiary" [class.dark-theme]="themeService.theme() === 'dark'">
+  <header class="neumo-navbar navbar navbar-expand-lg px-4">
+    <button class="neumo-btn back-btn neumorphic-icon" [@genieEffect]="isAnimating ? 'animating' : 'idle'" (click)="goBack()" aria-label="Go back">
+      <i class="bi bi-arrow-left"></i>
+    </button>
+    <a class="navbar-brand fw-bold" routerLink="/">🍛 Smart Recipe Recommender</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/create" routerLinkActive="active">Create</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/favorites" routerLinkActive="active">Favorites</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" (click)="themeService.toggleTheme()">
+            <i class="bi" [class.bi-moon-stars-fill]="themeService.theme() === 'light'" [class.bi-sun-fill]="themeService.theme() === 'dark'"></i>
+          </button>
+        </li>
+        <li class="nav-item">
+          <app-language-switcher></app-language-switcher>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="layout-main container py-5">
+    <router-outlet />
+  </main>
+</div>

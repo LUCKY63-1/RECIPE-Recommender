@@ -1,0 +1,291 @@
+.welcome-container {
+  min-height: calc(100vh - 56px); /* Adjust for header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--rc-bg);
+  color: var(--rc-text);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme switch */
+}
+
+/* Hero Section */
+.hero-section {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('/assets/images/hero-background.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 120px 0; /* Increased padding */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  transition: background 0.3s ease; /* Smooth overlay change */
+}
+
+/* Slightly stronger overlay in dark theme, but still image-based */
+.dark-theme .hero-section {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url('/assets/images/hero-background.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--rc-text-soft);
+  transition: color 0.3s ease;
+}
+
+.hero-title {
+  font-size: 4rem; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: var(--rc-heading);
+  transition: color 0.3s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  opacity: 0.96;
+  color: var(--rc-text-soft);
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Primary Button - aligned with global token semantics */
+.btn-primary {
+  background-color: var(--rc-primary);
+  border-color: var(--rc-primary);
+  color: var(--rc-on-primary);
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: var(--rc-radius-pill);
+  box-shadow: var(--rc-shadow-soft);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease,
+    color 0.25s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--rc-hover-primary);
+  border-color: var(--rc-hover-primary);
+  box-shadow: var(--rc-shadow-soft-strong);
+  transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-section {
+  padding: 60px 0;
+  background-color: var(--rc-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Feature Cards */
+.feature-card {
+  @extend .neumo-card;
+  border-radius: 28px;
+  padding: 2.5rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--rc-shadow-soft-strong);
+}
+
+/* Icons & Typography within Feature Cards */
+.feature-icon {
+  font-size: 3rem;
+  color: var(--rc-accent);
+  margin-bottom: 20px;
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+.feature-card h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--rc-heading);
+  transition: color 0.3s ease;
+}
+
+.feature-card p {
+  color: var(--rc-text-soft);
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/* Footer */
+.app-footer {
+  background-color: var(--rc-surface-alt);
+  color: var(--rc-text-soft);
+  padding: 30px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--rc-border-subtle);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.app-footer a {
+  color: var(--rc-link);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.app-footer a:hover {
+  color: var(--rc-hover-primary);
+  text-decoration: underline;
+}
+
+/* Animations (motion-only; theme-safe) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Carousel Styles */
+.carousel {
+  margin-top: 40px;
+}
+
+.carousel-item {
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.carousel-item:not(.active) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* For previous direction */
+.carousel-item-prev:not(.active) {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Smooth sliding animation for carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(0.8) invert(1);
+}
+
+/* Dark theme carousel adjustments */
+.dark-theme .carousel-control-prev-icon,
+.dark-theme .carousel-control-next-icon {
+  filter: brightness(0) invert(1);
+}
+
+.dark-theme .carousel-control-prev:hover .carousel-control-prev-icon,
+.dark-theme .carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(0.8) invert(1);
+}
+
+/* Feature icon animations */
+.feature-icon {
+  font-size: 3rem;
+  color: var(--rc-accent);
+  margin-bottom: 20px;
+  transition: color 0.3s ease, filter 0.3s ease;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 0;
+  }
+
+  .hero-title {
+    font-size: 2.8rem; /* Adjusted for smaller screens */
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .feature-card {
+    margin-bottom: 30px;
+  }
+
+  /* Preserve stronger overlay on small screens for readability */
+  .dark-theme .hero-section {
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 1)
+      ),
+      url('/assets/images/hero-background.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  /* Adjust carousel for mobile */
+  .carousel {
+    margin-top: 30px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 8%;
+  }
+}
+
+@media (min-width: 769px) {
+  .features-section .col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

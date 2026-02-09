@@ -1,0 +1,374 @@
+[
+  {
+    "id": "TC001",
+    "title": "User Signup with Valid Credentials",
+    "description": "Verify that a new user can successfully sign up using valid credentials through Supabase authentication.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the signup page from the Welcome Page."
+      },
+      {
+        "type": "action",
+        "description": "Enter a valid email, username, and password."
+      },
+      {
+        "type": "action",
+        "description": "Submit the signup form."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that the user is registered, logged in automatically, and redirected to the main dashboard."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "User Login with Correct Credentials",
+    "description": "Verify that an existing user can successfully log in using correct credentials.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter a valid registered email and password."
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm user authentication succeeds and user is redirected to the main interface."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "User Login with Incorrect Credentials",
+    "description": "Verify that login fails with incorrect username or password and proper error message is displayed.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid or unregistered email and/or wrong password."
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that login is denied and a clear error message is shown to the user."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Set and Persist Dietary and Cuisine Preferences",
+    "description": "Verify that users can set and save dietary restrictions and cuisine preferences, and preferences are persisted for subsequent sessions.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "After login, navigate to Preferences Settings."
+      },
+      {
+        "type": "action",
+        "description": "Select dietary restrictions and ingredient exclusions."
+      },
+      {
+        "type": "action",
+        "description": "Choose preferred cuisine types."
+      },
+      {
+        "type": "action",
+        "description": "Save preferences."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify preferences are saved and correctly reflected on page reload or new login session."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "AI-Powered Recipe Generation with Valid Input",
+    "description": "Verify that the AI recipe generation returns relevant and personalized recipe results based on user input of ingredients and preferences.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the Create Meal component."
+      },
+      {
+        "type": "action",
+        "description": "Input a list of available ingredients."
+      },
+      {
+        "type": "action",
+        "description": "Submit the request to generate recipes."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure a list of AI-generated recipes is returned that respects user dietary preferences."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "AI Recipe Generation with No Ingredients Input",
+    "description": "Verify behavior when no ingredients are entered: appropriate error or default suggestion is provided.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Go to Create Meal component."
+      },
+      {
+        "type": "action",
+        "description": "Leave the ingredients input empty and submit request."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that system either prompts for input or returns default recipes without crashing."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Search Recipes by Ingredients",
+    "description": "Verify users can search and filter recipes by one or multiple ingredients and receive accurate results.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the Results List component."
+      },
+      {
+        "type": "action",
+        "description": "Enter ingredient keywords in the search/filter box."
+      },
+      {
+        "type": "action",
+        "description": "Execute search."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that displayed recipes include the ingredients searched for and irrelevant results are excluded."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Recipe Detail View Displays Complete Information",
+    "description": "Verify that selecting a recipe displays detailed view with ingredients, instructions, cooking times, and nutritional info.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Select any recipe from the Results List component."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm recipe detail page shows all required data fields correctly."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Favorites Management - Save and Retrieve",
+    "description": "Verify that users can save recipes to their Favorites and that favorites are accurately stored and retrieved.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "While viewing a recipe, click the 'Add to Favorites' button."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the Favorites Page."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that the saved recipe appears in the favorites list."
+      },
+      {
+        "type": "action",
+        "description": "Refresh the page or log out and back in."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the favorites list persists and shows saved recipes across sessions."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Internationalization - Language Switch",
+    "description": "Verify that application text dynamically switches according to language selection and translations render correctly.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open Settings and change the language to a non-default option."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm all UI text, including buttons, labels, and navigation, update correctly."
+      },
+      {
+        "type": "action",
+        "description": "Navigate throughout various pages."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify translations persist across navigation and components."
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Theme Switching - Light to Dark Mode",
+    "description": "Verify the application can switch between light and dark themes dynamically with no UI glitches or readability issues.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Settings."
+      },
+      {
+        "type": "action",
+        "description": "Toggle the theme switch to dark mode."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the entire UI updates to dark mode without layout or content overlap issues."
+      },
+      {
+        "type": "action",
+        "description": "Toggle back to light mode."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the UI reverts correctly to light mode with all elements visible and styled."
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Backend API - Recipe Generation Endpoint Success",
+    "description": "Verify that the AI Routes API for recipe generation responds correctly with valid data and HTTP 200 status.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send a valid POST request with ingredients and preferences to the AI Routes '/generate' endpoint."
+      },
+      {
+        "type": "assertion",
+        "description": "Check the HTTP response code is 200 OK."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure response contains a list of generated recipes with all required fields."
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Backend API - Favorites Management Endpoint Error Handling",
+    "description": "Verify that the Favorites Routes API gracefully handles invalid requests such as saving a malformed recipe or unauthorized access.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send a POST request to Favorites API with invalid or incomplete recipe data."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify response contains an appropriate error message and HTTP status 400 or 401 as per scenario."
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "In-Memory Cache Service TTL Expiry",
+    "description": "Verify that cached data expires correctly after the specified Time-To-Live, ensuring fresh data is fetched afterward.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Request a frequently queried recipe data to cache it."
+      },
+      {
+        "type": "action",
+        "description": "Wait for the configured TTL duration plus a buffer."
+      },
+      {
+        "type": "action",
+        "description": "Request the same recipe data again."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that new data is fetched and cache is refreshed after TTL expiry."
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "UI Responsiveness on Mobile and Desktop",
+    "description": "Verify that all UI components adapt correctly and remain usable on both desktop and mobile screen sizes.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the application in different viewport sizes simulating desktop and various mobile devices."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure layouts, buttons, texts, and navigation adapt and remain fully functional without overflow or clipping."
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Performance Benchmark Under Typical User Load",
+    "description": "Verify that the application UI and backend APIs meet responsiveness standards under expected concurrent user loads.",
+    "category": "performance",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate typical user interactions including login, preferences update, recipe generation, and favorites management with concurrent users."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm UI remains responsive within acceptable time limits and backend APIs respond within performance benchmarks."
+      }
+    ]
+  }
+]

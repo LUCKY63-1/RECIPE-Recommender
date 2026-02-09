@@ -1,0 +1,150 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card {
+  @extend .neumo-card;
+  border-radius: 28px !important;
+}
+
+/* Title & supporting text */
+.card-title {
+  color: var(--rc-heading);
+  font-size: 2rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: var(--rc-text-soft);
+}
+
+/* Labels */
+.form-label {
+  font-weight: 600;
+  color: var(--rc-text-soft);
+}
+
+/* Inputs & selects */
+.form-control,
+.form-select {
+  @extend .neumo-input;
+  border-radius: 20px !important;
+}
+
+.form-control::placeholder {
+  color: var(--rc-input-placeholder);
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--rc-focus-outline);
+  box-shadow: 0 0 0 0.16rem var(--rc-focus-outline-soft);
+  background-color: var(--rc-input-bg);
+  color: var(--rc-text);
+  transform: translateY(-1px);
+}
+
+/* Dark mode dropdown styling */
+.dark-theme .form-select {
+  background-color: var(--rc-input-bg);
+  color: var(--rc-text);
+  border-color: var(--rc-input-border);
+}
+
+.dark-theme .form-select option {
+  background-color: var(--rc-surface);
+  color: var(--rc-text);
+}
+
+.dark-theme .form-select:focus {
+  background-color: var(--rc-input-bg);
+  color: var(--rc-text);
+  border-color: var(--rc-focus-outline);
+  box-shadow: 0 0 0 0.16rem var(--rc-focus-outline-soft);
+}
+
+/* Dropdown arrow color for dark mode */
+.dark-theme .form-select::-webkit-dropdown-arrow {
+  filter: invert(1);
+}
+
+.dark-theme .form-select::-moz-dropdown-arrow {
+  filter: invert(1);
+}
+
+/* Ensure dropdown menu items are visible in dark mode */
+.dark-theme .form-select option {
+  background-color: var(--rc-surface);
+  color: var(--rc-text);
+}
+
+/* Bootstrap dropdown menu override for dark mode */
+.dark-theme .dropdown-menu {
+  background-color: var(--rc-surface);
+  border-color: var(--rc-border-subtle);
+  color: var(--rc-text);
+}
+
+.dark-theme .dropdown-item {
+  color: var(--rc-text);
+}
+
+.dark-theme .dropdown-item:hover,
+.dark-theme .dropdown-item:focus {
+  background-color: var(--rc-hover-bg);
+  color: var(--rc-text);
+}
+
+.dark-theme .dropdown-item.active,
+.dark-theme .dropdown-item:active {
+  background-color: var(--rc-primary);
+  color: var(--rc-on-primary);
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: var(--rc-primary);
+  border-color: var(--rc-primary);
+  color: var(--rc-on-primary);
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: var(--rc-radius-pill);
+  box-shadow: var(--rc-shadow-soft);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--rc-hover-primary);
+  border-color: var(--rc-hover-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--rc-shadow-soft);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--rc-shadow-soft);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}

@@ -1,0 +1,151 @@
+{
+  "common": {
+    "backToResults": "Back to results",
+    "ingredients": "Ingredients",
+    "steps": "Steps",
+    "tipsFromChef": "Tips from our chef",
+    "home": "Home",
+    "favorites": "Favorites",
+    "search": "Search",
+    "generateRecipe": "Generate Recipe",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "share": "Share"
+  },
+  "welcome": {
+    "title": "Your Culinary Journey Starts Here",
+    "subtitle": "Discover delicious recipes tailored to your pantry and preferences.",
+    "getStarted": "🍽️ Get Started",
+    "howItWorks": "How It Works",
+    "addIngredients": "Add Ingredients",
+    "addIngredientsDesc": "Tell us what you have in your kitchen.",
+    "getSuggestions": "Get Suggestions",
+    "getSuggestionsDesc": "Our AI chef will craft unique recipes for you.",
+    "cookEnjoy": "Cook & Enjoy",
+    "cookEnjoyDesc": "Follow easy steps and savor your homemade meal.",
+    "copyright": "&copy; 2023 Recipe Generator. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "dynamic": {
+    "recipeTitle": "Recipe Title",
+    "servings": "Servings",
+    "prepTime": "Prep Time",
+    "cookTime": "Cook Time",
+    "totalTime": "Total Time",
+    "difficulty": "Difficulty",
+    "cuisine": "Cuisine",
+    "dietary": "Dietary",
+    "calories": "Calories",
+    "protein": "Protein",
+    "carbs": "Carbs",
+    "fat": "Fat",
+    "fiber": "Fiber",
+    "sodium": "Sodium"
+  },
+  "results": {
+    "title": "Your AI-curated menu 🍽️",
+    "subtitle": "Handpicked ideas based on what's in your kitchen.",
+    "loading": "Loading recipes...",
+    "noRecipes": "No recipes found",
+    "viewRecipe": "View Recipe",
+    "minutes": "min",
+    "vegetarian": "Vegetarian",
+    "nonVeg": "Non-Veg",
+    "servings": "servings",
+    "defaultDescription": "AI generated Indian-style recipe suggestion."
+  },
+  "recipeDetail": {
+    "enrichingRecipe": "AI is enriching this recipe for you...",
+    "recipeNotFound": "Recipe not found. Go back and generate suggestions again."
+  },
+  "createMeal": {
+    "loadingMessage": "AI is cooking up delicious recipes for you...",
+    "title": "Tell us what's in your kitchen 🥘",
+    "subtitle": "List a few ingredients, choose your vibe, and we'll plate up Indian-style recipes tailored to you.",
+    "ingredientsLabel": "Ingredients you have (comma separated)",
+    "ingredientsPlaceholder": "e.g. rice, tomato, onion, egg, bread",
+    "ingredientsError": "Please add at least one ingredient to generate recipes!",
+    "dietLabel": "Diet preference",
+    "dietOptions": {
+      "veg": "Vegetarian",
+      "nonVeg": "Non-Vegetarian",
+      "vegan": "Vegan",
+      "jain": "Jain-friendly",
+      "keto": "Keto-ish"
+    },
+    "spiceLevelLabel": "Spice level",
+    "spiceLevelOptions": {
+      "mild": "Mild",
+      "medium": "Medium",
+      "hot": "Hot"
+    },
+    "timeLabel": "Time available (minutes)",
+    "generateButton": "Generate Smart Recipes"
+  },
+  "favorites": {
+    "title": "Your Favorites",
+    "backToHome": "← Back to Home",
+    "noFavorites": "No favorite recipes yet",
+    "exploreMessage": "Start exploring recipes and save your favorites!",
+    "viewRecipe": "View Recipe"
+  },
+  "mappings": {
+    "ingredients": {
+      "tomato": "tomato",
+      "onion": "onion",
+      "garlic": "garlic",
+      "ginger": "ginger",
+      "potato": "potato",
+      "rice": "rice",
+      "wheat flour": "wheat flour",
+      "chickpea flour": "chickpea flour",
+      "milk": "milk",
+      "yogurt": "yogurt",
+      "butter": "butter",
+      "oil": "oil",
+      "salt": "salt",
+      "sugar": "sugar",
+      "cumin": "cumin",
+      "coriander": "coriander",
+      "turmeric": "turmeric",
+      "red chili powder": "red chili powder",
+      "garam masala": "garam masala"
+    },
+    "methods": {
+      "boil": "boil",
+      "fry": "fry",
+      "bake": "bake",
+      "grill": "grill",
+      "roast": "roast",
+      "stir": "stir",
+      "chop": "chop",
+      "slice": "slice",
+      "dice": "dice",
+      "mince": "mince",
+      "sauté": "sauté",
+      "simmer": "simmer",
+      "steam": "steam",
+      "blend": "blend"
+    },
+    "units": {
+      "cup": "cup",
+      "tablespoon": "tablespoon",
+      "teaspoon": "teaspoon",
+      "gram": "gram",
+      "kilogram": "kilogram",
+      "milliliter": "milliliter",
+      "liter": "liter",
+      "pound": "pound",
+      "ounce": "ounce",
+      "piece": "piece",
+      "bunch": "bunch"
+    }
+  }
+}

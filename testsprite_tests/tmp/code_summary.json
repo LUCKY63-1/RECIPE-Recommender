@@ -1,0 +1,100 @@
+{
+  "tech_stack": ["TypeScript", "Angular", "Node.js", "Express", "Supabase", "SQLite"],
+  "features": [
+    {
+      "name": "AI Recipe Generation",
+      "description": "Generates recipes using AI based on user ingredients",
+      "files": ["server/src/routes/ai.ts", "server/src/services/llmClient.ts", "src/app/services/ai-recipe.service.ts"],
+      "api_doc": {
+        "openapi": "3.0.0",
+        "info": {
+          "title": "AI Recipe API",
+          "version": "1.0.0"
+        },
+        "paths": {
+          "/ai/generate": {
+            "post": {
+              "summary": "Generate recipes",
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "ingredients": {"type": "array", "items": {"type": "string"}},
+                        "preferences": {"type": "object"}
+                      }
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Recipes generated"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Favorites Management",
+      "description": "Manage user favorite recipes",
+      "files": ["server/src/routes/favorites.ts", "server/src/services/favorites.service.ts", "src/app/services/favorites.service.ts", "src/app/pages/favorites-page.component.ts"],
+      "api_doc": {
+        "openapi": "3.0.0",
+        "info": {
+          "title": "Favorites API",
+          "version": "1.0.0"
+        },
+        "paths": {
+          "/favorites": {
+            "get": {
+              "summary": "Get favorites",
+              "responses": {
+                "200": {
+                  "description": "List of favorites"
+                }
+              }
+            },
+            "post": {
+              "summary": "Add favorite",
+              "requestBody": {
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "id": {"type": "string"},
+                        "title": {"type": "string"}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/favorites/{id}": {
+            "delete": {
+              "summary": "Remove favorite",
+              "parameters": [
+                {
+                  "name": "id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {"type": "string"}
+                }
+              ],
+              "responses": {
+                "204": {
+                  "description": "Favorite removed"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
